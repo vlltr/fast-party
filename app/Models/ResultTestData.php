@@ -5,18 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Test extends Model
+class ResultTestData extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name'];
+    protected $fillable = [
+        'result_id',
+        'default_name',
+        'read_value',
+        'result',
+    ];
 
-    public function result()
-    {
+    public function result(){
         return $this->belongsTo(Result::class);
-    }
-
-    public function default_test_data(){
-        return $this->hasMany(DefaultTestData::class);
     }
 }
