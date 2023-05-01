@@ -10,4 +10,9 @@ class Test extends Model
     use HasFactory;
 
     protected $fillable = ['name'];
+
+    public function result()
+    {
+        return $this->belongsTo(Result::class);
+    }
 }
