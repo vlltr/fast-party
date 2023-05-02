@@ -25,7 +25,7 @@ class TestRequest extends FormRequest
             'testname' =>'required|string|max:255',
             'defaults' => 'required|array',
             'defaults.*.defname' => 'required|string|max:255',
-            'defaults.*.min' => 'required|',
+            'defaults.*.min' => 'required|numeric',
             'defaults.*.max' => 'required|numeric|gt:defaults.*.min',
         ];
     }
