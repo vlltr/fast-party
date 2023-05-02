@@ -13,7 +13,7 @@ class Test extends Model
 
     public function result()
     {
-        return $this->belongsTo(Result::class);
+        return $this->hasMany(Result::class);
     }
 
     public function default_test_data(){

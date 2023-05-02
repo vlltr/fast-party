@@ -77,6 +77,10 @@ class TestController extends Controller
     }
     public function destroy(Test $test)
     {
+        $test->result()->each(function ($result) {
+            $result->result_test_data()->delete();
+            $result->delete();
+        });
         $test->default_test_data()->delete();
         $test->delete();
 
