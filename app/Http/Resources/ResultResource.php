@@ -39,8 +39,8 @@ class ResultResource extends JsonResource
             'serialno' => $this->serial_number,
             'datetime'  => $this->created_at->format('Y-m-d H:i'),
             'duration' => $this->duration,
-            'defaults' => [$defaults],
-            'results' => [$results],
+            'defaults' => $defaults,
+            'results' => $results,
 
 
 
