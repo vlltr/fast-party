@@ -26,7 +26,7 @@ class TestResource extends JsonResource
             'testid' => $this->id,
             'testname' => $this->name,
             'datetime' => $this->created_at->format('Y-m-d H:i'),
-            'defaults' => [$defaults]
+            'defaults' => $defaults
         ];
     }
 }
