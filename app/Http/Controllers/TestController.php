@@ -12,7 +12,7 @@ class TestController extends Controller
 {
     public function index()
     {
-        $tests = Test::with('default_test_data')->get();
+        $tests = Test::with('default_test_data')->latest()->get();
         return TestResource::collection($tests);
     }
 

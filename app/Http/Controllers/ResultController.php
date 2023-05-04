@@ -12,7 +12,7 @@ class ResultController extends Controller
 {
     public function index()
     {
-        $results = Result::with(['test', 'result_test_data'])->get();
+        $results = Result::with(['test', 'result_test_data'])->latest()->get();
         return ResultResource::collection($results);
     }
 
